@@ -1,6 +1,14 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+/* AUDIO */
+const bgMusic = document.getElementById("bgMusic");
+bgMusic.volume = 0.3;
+
+let explosionSound = new Audio("assets/explosion.mp3");
+explosionSound.volume = 0.8;
+
+/* CANVAS */
 canvas.width = window.innerWidth * 0.9;
 canvas.height = window.innerHeight * 0.65;
 
@@ -15,10 +23,7 @@ let score = 0;
 let shakeTime = 0;
 let difficulty = 1;
 
-/* SONIDO */
-let explosionSound = new Audio("assets/explosion.mp3");
-
-/* CURSOR ARREGLADO AUTOMÁTICO */
+/* CURSOR ESCALADO */
 const cursorImg = new Image();
 cursorImg.src = "assets/freezer-cursor.png";
 
@@ -38,20 +43,15 @@ img.src = "assets/krilin.png";
 let bg = new Image();
 bg.src = "assets/namek.jpg";
 
-/*
-OBJETO
-*/
+/* OBJETO */
 class GameObject{
 
 constructor(){
-
 this.size = Math.random()*25 + 35;
 this.posX = Math.random()*width;
 this.posY = Math.random()*height;
-
 this.dx = (Math.random()-0.5)*4;
 this.dy = (Math.random()-0.5)*4;
-
 }
 
 move(){
@@ -200,14 +200,12 @@ ctx.drawImage(bg,0,0,width,height);
 /* GENERAR */
 function generateObjects(){
 while(objects.length<25){
-let n=new GameObject();
-objects.push(n);
+objects.push(new GameObject());
 }
 }
 
 /* CLICK */
 canvas.addEventListener("click",e=>{
-
 let rect=canvas.getBoundingClientRect();
 let mx=e.clientX-rect.left;
 let my=e.clientY-rect.top;

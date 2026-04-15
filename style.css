@@ -4,6 +4,13 @@ font-family:Arial, sans-serif;
 background:url("assets/namek.jpg") no-repeat center center/cover;
 }
 
+/* LOGO */
+.logo{
+width:60px;
+margin-bottom:5px;
+filter: drop-shadow(0 0 10px rgba(255,255,0,0.7));
+}
+
 /* TITULO */
 .titulo{
 font-size:42px;
