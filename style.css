@@ -1,0 +1,62 @@
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:url("assets/namek.jpg") no-repeat center center/cover;
+}
+
+/* TITULO */
+.titulo{
+font-size:42px;
+font-weight:bold;
+text-align:center;
+color:white;
+text-shadow:0 0 10px orange, 0 0 25px red;
+}
+
+/* INSTRUCCIONES */
+.instructions{
+max-width:520px;
+margin:20px auto;
+padding:15px;
+background:rgba(0,0,0,0.65);
+border-radius:15px;
+text-align:center;
+color:white;
+box-shadow:0 0 25px rgba(0,0,0,0.9);
+}
+
+.inst-title{
+font-size:20px;
+font-weight:bold;
+color:#ffd700;
+}
+
+/* CANVAS */
+main{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+canvas{
+margin-top:20px;
+border-radius:15px;
+box-shadow:0 20px 50px rgba(0,0,0,0.8);
+}
+
+/* SCORE */
+#score{
+position:absolute;
+top:20px;
+right:30px;
+color:white;
+font-size:20px;
+font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+color:white;
+margin-top:10px;
+}
